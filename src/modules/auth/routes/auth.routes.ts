@@ -3,6 +3,7 @@ import asyncHandler from "express-async-handler";
 import { registerUser } from "../controllers/register.controller";
 import { refresh, protectedRoute } from "../controllers/auth.controllers";
 import { protect } from "../../../middleware/auth.middleware";
+
 import { createExpense, getUserExpenses } from "../../expense/controllers/expense.controller";
 const authRouter = Router();
 

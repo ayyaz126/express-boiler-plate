@@ -1,7 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-export const protect = (req: Request, res: Response, next: NextFunction): void => {
+export const protect = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void => {
   try {
     const token = req.headers.authorization?.split(" ")[1];
 
@@ -17,5 +21,3 @@ export const protect = (req: Request, res: Response, next: NextFunction): void =
     res.status(401).json({ message: "Unauthorized" });
   }
 };
-
-

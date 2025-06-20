@@ -5,7 +5,6 @@ dotenv.config();
 
 const accessTokenSecret: Secret = process.env.ACCESS_TOKEN_SECRET!;
 const refreshTokenSecret: Secret = process.env.REFRESH_TOKEN_SECRET!;
-
 const accessTokenExpiry = process.env.ACCESS_TOKEN_EXPIRES_IN || "15m";
 const refreshTokenExpiry = process.env.REFRESH_TOKEN_EXPIRES_IN || "7d";
 
